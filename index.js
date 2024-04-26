@@ -12,9 +12,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/',otpRouter);
-app.use('/,(req,res)=>{
-        res.json({message:"hello"})
-        });
 startCronJobs();
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, {
